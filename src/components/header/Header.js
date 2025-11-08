@@ -24,7 +24,7 @@ const Header = () => {
         room: 1
     })
 
-    const hadleOption = (name, operation) => {
+    const handleOption = (name, operation) => {
         setOptions((prev) => {
             return {
                 ...prev, [name]: operation === 'i' ? options[name] + 1 : options[name] - 1
@@ -86,12 +86,12 @@ const Header = () => {
                                 <span className="optionText">Adult</span>
 
                                 <div className="optionCounter">
-                                    <button className="optionCounterButton" onClick={() => {
-                                        hadleOption("adult", "d")
+                                    <button disabled={options.adult <= 1} className="optionCounterButton" onClick={() => {
+                                        handleOption("adult", "d")
                                     }}>-</button>
-                                    <span className="optionCounterNumber">1</span>
+                                    <span className="optionCounterNumber">{options.adult}</span>
                                     <button className="optionCounterButton" onClick={() => {
-                                        hadleOption("adult", "i")
+                                        handleOption("adult", "i")
                                     }}>+</button>
                                 </div>
 
@@ -99,12 +99,12 @@ const Header = () => {
                             <div className="optionItem">
                                 <span className="optionText">Children</span>
                                 <div className="optionCounter">
-                                    <button className="optionCounterButton" onClick={() => {
-                                        hadleOption("children", "d")
+                                    <button disabled={options.children <= 0} className="optionCounterButton" onClick={() => {
+                                        handleOption("children", "d")
                                     }}>-</button>
-                                    <span className="optionCounterNumber">1</span>
+                                    <span className="optionCounterNumber">{options.children}</span>
                                     <button className="optionCounterButton" onClick={() => {
-                                        hadleOption("children", "i")
+                                        handleOption("children", "i")
                                     }}>+</button>
                                 </div>
 
@@ -112,12 +112,12 @@ const Header = () => {
                             <div className="optionItem">
                                 <span className="optionText">Room</span>
                                 <div className="optionCounter">
-                                    <button className="optionCounterButton" onClick={() => {
-                                        hadleOption("room", "d")
+                                    <button disabled={options.room <= 1} className="optionCounterButton" onClick={() => {
+                                        handleOption("room", "d")
                                     }}>-</button>
-                                    <span className="optionCounterNumber">1</span>
+                                    <span className="optionCounterNumber">{options.room}</span>
                                     <button className="optionCounterButton" onClick={() => {
-                                        hadleOption("room", "i")
+                                        handleOption("room", "i")
                                     }}>+</button></div>
 
                             </div>
