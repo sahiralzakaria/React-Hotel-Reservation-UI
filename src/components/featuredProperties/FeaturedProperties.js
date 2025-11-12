@@ -37,7 +37,7 @@ const FeaturedProperties = () => {
             </div>
 
             <div className='fbItem'>
-                <img className='fbImg' alt='Hotel in Ankara' src='/assets/AnkaraPalace.jpg' />
+                <img className='fbImg' alt='Hotel in Ankara' src='/assets/AnkaraPalace.webp' />
                 <span className='fbName'>Ankara Palace Hotel</span>
                 <span className='fbCity'>Ankara</span>
                 <span className='fbPrice'>Starting from 115$</span>
