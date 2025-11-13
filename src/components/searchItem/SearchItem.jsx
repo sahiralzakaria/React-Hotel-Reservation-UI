@@ -19,7 +19,7 @@ const SearchItem = () => {
                     You can cancel later, so lock in this great price today!
                 </span>
             </div>
-            <div className="siDetails"></div>
+            <div className="siDetails">details</div>
         </div>
     )
 }
