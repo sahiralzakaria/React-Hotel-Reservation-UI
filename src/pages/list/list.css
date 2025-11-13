@@ -53,8 +53,28 @@
     cursor: pointer;
 }
 
+.lsOptionItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 12px;
+}
 
+.lsOptionInput {
+    width: 50px;
+}
 
+.listSearch>button {
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    width: 100%;
+    color: white;
+    background-color: #0071c2;
+    padding: 10px;
+
+}
 
 .listResult {
     flex: 3;
