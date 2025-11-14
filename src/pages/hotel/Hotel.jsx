@@ -33,12 +33,12 @@ const Hotel = () => {
       <div className="hotelContainer">
 
         {open && <div className="slider">
-          <FontAwesomeIcon icon={faCircleXmark} />
-          <FontAwesomeIcon icon={faCircleArrowLeft} />
+          <FontAwesomeIcon icon={faCircleXmark} className='close' onClick={() => { setOpen(false) }} />
+          <FontAwesomeIcon icon={faCircleArrowLeft} className='arrow' />
           <div className="sliderWrapper">
             <img src={photos[slideNumber].src} alt="" className="sliderImg" />
           </div>
-          <FontAwesomeIcon icon={faCircleArrowRight} />
+          <FontAwesomeIcon icon={faCircleArrowRight} className='arrow' />
         </div>}
 
         <div className="hotelWrapper">
